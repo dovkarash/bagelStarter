@@ -1,6 +1,7 @@
 <template>
   <div class="home">
     <div class="bagel-wrap">
+      <div class="pattern-wrap"><div class="oval"></div><div class="oval"></div><div class="oval"></div><div class="oval"></div><div class="oval"></div><div class="oval"></div><div class="oval"></div><div class="oval"></div><div class="oval"></div><div class="oval"></div><div class="oval"></div><div class="oval"></div><div class="oval"></div><div class="oval"></div><div class="oval"></div><div class="oval"></div><div class="oval"></div><div class="oval"></div><div class="oval"></div><div class="oval"></div><div class="oval"></div><div class="oval"></div></div>
       <div class="bgl-menu">
         <a
             href=""
@@ -12,15 +13,21 @@
               width=""
            /></a>
         <div class="bgl-menu-space"></div>
-        <div class="bgl-menu-links">
-          <a
+        <div
+            class="bgl-menu-links"
+            :class="{ open: openSideBar }"
+        >
+          <div
+              @click="openSideBar = false"
               href=""
               class="bgl-close-menu-btn"
-          ><img
-    src="../assets/close.svg"
-    height=""
-    width=""
- /></a>
+          >
+            <img
+                src="../assets/close.svg"
+                height=""
+                width=""
+             />
+          </div>
           <a
               href=""
               class="bgl-menu-link"
@@ -32,20 +39,31 @@
                                 class="bgl-menu-link"
                             >Link</a>
         </div>
-        <a
-            href=""
+        <div
+            @click="openSideBar = true"
             class="bgl-menu-btn"
-        ><img
-    src="../assets/menu.svg"
-    height=""
-    width=""
- /></a>
+        >
+          <img
+              src="../assets/menu.svg"
+              height=""
+              width=""
+           />
+        </div>
       </div>
       <div class="bgl-w560">
         <h1 class="bgl-big-head">Welcome to Bagel studio</h1>
-        <p class="bgl-text">Hi on this page you will find all kinds of elements that can be used in different projects</p>
-        <div class="bgl-dropdown open">
-          <div class="bgl-dropdown-head">
+        <p class="bgl-text">
+          Hi on this page you will find all kinds of elements that can be used
+          in different projects
+        </p>
+        <div
+            class="bgl-dropdown"
+            :class="{ open: opendropdown }"
+        >
+          <div
+              class="bgl-dropdown-head"
+              @click="opendropdown = !opendropdown"
+          >
             <p>Dropddown<br /></p>
             <img
                 src="../assets/down.svg"
@@ -69,39 +87,58 @@
             >Link</a>
           </div>
         </div>
-        <div class="center"><a
-    href=""
-    class="bgl-btn"
->Click me!</a><a
-                  href=""
-                  class="bgl-btn line"
-              >Click me!</a></div><div class="bgl-box">
+        <div class="center">
+          <a
+              href=""
+              class="bgl-btn"
+          >Click me!</a><a
+                            href=""
+                            class="bgl-btn line"
+                        >Click me!</a>
+        </div>
+        <div class="bgl-box">
           <p class="bgl-text">this is a box a very simple box</p>
         </div>
-        <div class="bgl-popup-wrap center"><a
-    href=""
-    class="bgl-btn"
->Pop me!</a>
-    <div class="bgl-popup-background"><a
-    href=""
-    class="bgl-close-popup"
->
-    <img
-        src="../assets/close.svg"
-        height=""
-        width=""
-        class=""
-     /></a>
-    <div class="bgl-popup-content-wrap"><div class="bgl-popup-box"><img
-    src="../assets/eatMe.svg"
-    height=""
-    width=""
-    class="bgl-popup-img"
- />
-    <h4>This is my popup</h4><p>there's no other like it, and I can pop it if I like</p><a
-                                                                                            href=""
-                                                                                            class="bgl-btn"
-                                                                                        >Popup&nbsp;</a></div></div></div></div>
+        <div class="bgl-popup-wrap center">
+          <button type="button">Button</button>
+          <div
+              @click="openPopup = true"
+              href=""
+              class="bgl-btn"
+          >Pop me!</div>
+          <div
+              class="bgl-popup-background"
+              :class="{ open: openPopup }"
+          >
+            <div
+                class="bgl-close-popup"
+                @click="openPopup = false"
+            >
+              <img
+                  src="../assets/close.svg"
+                  height=""
+                  width=""
+                  class=""
+               />
+            </div>
+            <div class="bgl-popup-content-wrap">
+              <div class="bgl-popup-box">
+                <img
+                    src="../assets/eatMe.svg"
+                    height=""
+                    width=""
+                    class="bgl-popup-img"
+                 />
+                <h4>This is my popup</h4>
+                <p>there's no other like it, and I can pop it if I like</p>
+                <a
+                    href=""
+                    class="bgl-btn"
+                >Popup&nbsp;</a>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="bgl-form">
           <form
               action="/"
@@ -161,8 +198,6 @@
                  >radio2</label>
             </div>
 
-
-
             <div class="bgl-checkbox-wrap">
               <input
                   class="bgl-checkbox"
@@ -193,14 +228,47 @@
         </div>
         <div class="bgl-tabs">
           <div class="bgl-tabs-head">
-            <div class="bgl-tab-head open"><p>Tab 1</p></div>
-            <div class="bgl-tab-head"><p>Tab 2</p></div>
-            <div class="bgl-tab-head"><p>Tab 3</p></div>
+            <div
+                class="bgl-tab-head"
+                @click="tab = 1"
+                :class="{ open: tab === 1 }"
+            >
+              <p>Tab 1</p>
+            </div>
+            <div
+                class="bgl-tab-head"
+                @click="tab = 2"
+                :class="{ open: tab === 2 }"
+            >
+              <p>Tab 2</p>
+            </div>
+            <div
+                class="bgl-tab-head"
+                @click="tab = 3"
+                :class="{ open: tab === 3 }"
+            >
+              <p>Tab 3</p>
+            </div>
           </div>
           <div class="bgl-tabs-content">
-            <div class="bgl-tab open"><p>Text for tab 1</p></div>
-            <div class="bgl-tab"><p>Text for tab 2</p></div>
-            <div class="bgl-tab"><p>Text for tab 3</p></div>
+            <div
+                class="bgl-tab"
+                :class="{ open: tab === 1 }"
+            >
+              <p>Text for tab 1</p>
+            </div>
+            <div
+                class="bgl-tab"
+                :class="{ open: tab === 2 }"
+            >
+              <p>Text for tab 2</p>
+            </div>
+            <div
+                class="bgl-tab"
+                :class="{ open: tab === 3 }"
+            >
+              <p>Text for tab 3</p>
+            </div>
           </div>
         </div>
         <div class="center">
@@ -237,6 +305,12 @@
 
 <script>
 export default {
+  data: () => ({
+    opendropdown: false,
+    openPopup: false,
+    openSideBar: false,
+    tab: 1,
+  }),
   name: "Home",
 };
 </script>

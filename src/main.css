@@ -583,6 +583,7 @@ button {
   max-width: 560px;
   width: 90%;
   margin: 0 auto;
+  position: relative;
 }
 
 .bgl-big-head {
@@ -663,6 +664,7 @@ button {
   position: relative;
   padding: 20px;
   background: #182435;
+  cursor: pointer;
 }
 
 .bgl-dropdown-head p {
@@ -711,7 +713,7 @@ button {
 
 .bgl-form {
   background: #262424;
-  padding: 10px 20px 20px;
+  padding: 20px 40px 40px;
   margin-top: 30px;
   margin-bottom: 30px;
 }
@@ -883,7 +885,7 @@ button {
 }
 
 .bgl-close-popup {
-  position: absolute ;
+  position: absolute;
   top: 0;
   right: 0;
   padding: 20px;
@@ -902,8 +904,8 @@ button {
   height: 100vh;
   width: calc(100vw - 120px);
   margin: 0 auto;
-  overflow: auto ;
-  display: flex ;
+  overflow: auto;
+  display: flex;
   justify-content: center;
   align-items: center;
   opacity: 0;
@@ -918,7 +920,7 @@ button {
   width: 100%;
   border-radius: 8px;
   color: Black;
-  text-align: center ;
+  text-align: center;
 }
 
 .bgl-popup-img {
@@ -934,6 +936,27 @@ button {
 
 .bgl-popup-background.open .bgl-popup-content-wrap {
   opacity: 1;
+}
+
+.oval {
+  height: 10vw;
+  width: 10vw;
+  background: Gray;
+  border-radius: 100%;
+  opacity: 0.1;
+  margin: 20px;
+  max-height: 100px;
+  max-width: 100px;
+  pointer-events: none;
+}
+
+.pattern-wrap {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+  margin-left: 50%;
+  opacity: 0.5;
 }
 
 @media screen and (max-width: 991px) {
@@ -977,5 +1000,9 @@ button {
 
   .bgl-popup-box {
     padding: 25px;
+  }
+
+  .bgl-form {
+    padding: 10px 25px 25px;
   }
 }
