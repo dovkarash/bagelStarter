@@ -58,7 +58,7 @@ main {
  */
 
 h1 {
-  font-size: 2em;
+  font-size: 60px;
   margin: 0.67em 0;
 }
 
@@ -584,10 +584,11 @@ button {
   width: 90%;
   margin: 0 auto;
   position: relative;
+  z-index: 2;
 }
 
 .bgl-big-head {
-  font-size: 60px;
+  font-size: 70px;
   margin-bottom: 20px;
   margin-top: 30px;
 }
@@ -957,6 +958,19 @@ button {
   width: 50%;
   margin-left: 50%;
   opacity: 0.5;
+  top: 0;
+}
+
+.back-bagel-shape {
+  height: 50vw;
+  width: 50vw;
+  border: 15vw #182435 solid;
+  border-radius: 100%;
+  pointer-events: none;
+  position: fixed;
+  bottom: -15vw;
+  opacity: 0.4;
+  left: -20vw;
 }
 
 @media screen and (max-width: 991px) {
@@ -995,7 +1009,7 @@ button {
 
 @media screen and (max-width: 767px) {
   .bgl-big-head {
-    font-size: 30px;
+    font-size: 40px;
   }
 
   .bgl-popup-box {
