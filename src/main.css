@@ -601,8 +601,8 @@ button {
   background: #182435;
   padding: 30px;
   border-radius: 8px;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .bgl-tab-head {
@@ -843,6 +843,80 @@ button {
   left: 0;
 }
 
+.bgl-btn {
+  background: #006DFF;
+  color: White;
+  transition: 200ms all ease;
+  text-decoration: none;
+  border-radius: 5px;
+  padding: 10px 30px;
+  display: inline-block;
+  margin: 10px;
+}
+
+.bgl-btn:hover {
+  filter: brightness(90%);
+  transform: translateY(-2px);
+  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.15);
+}
+
+.bgl-btn.line {
+  background: transparent;
+  border: 1px solid #006DFF;
+}
+
+.bgl-btn.line:hover {
+  background: #006DFF;
+}
+
+.bgl-popup-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99999;
+  background: rgb(0 0 0 / 80%);
+  transition: 200ms all ease;
+}
+
+.bgl-close-popup {
+  position: absolute ;
+  top: 0;
+  right: 0;
+  padding: 20px;
+  transition: 200ms all ease;
+}
+
+.bgl-close-popup img {
+  width: 20px;
+}
+
+.bgl-close-popup:hover {
+  opacity: 0.7;
+}
+
+.bgl-popup-content-wrap {
+  height: 100vh;
+  width: calc(100vw - 120px);
+  margin: 0 auto;
+  overflow: auto ;
+  display: flex ;
+  justify-content: center;
+  align-items: center;
+}
+
+.bgl-popup-box {
+  padding: 50px;
+  background: White;
+  max-width: 600px;
+  width: 100%;
+  border-radius: 8px;
+  color: Black;
+  text-align: center ;
+  transition: 200ms all ease;
+}
+
 @media screen and (max-width: 991px) {
   .bgl-logo {
     padding: 15px;
@@ -861,6 +935,7 @@ button {
     width: 240px;
     text-align: center;
     transition: 200ms all ease;
+    z-index: 9999;
   }
 
   .bgl-menu-link {
@@ -879,5 +954,9 @@ button {
 @media screen and (max-width: 767px) {
   .bgl-big-head {
     font-size: 30px;
+  }
+
+  .bgl-popup-box {
+    padding: 25px;
   }
 }
