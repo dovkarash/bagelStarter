@@ -875,9 +875,11 @@ button {
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 99999;
+  z-index: -2;
   background: rgb(0 0 0 / 80%);
   transition: 200ms all ease;
+  opacity: 0;
+  pointer-events: none;
 }
 
 .bgl-close-popup {
@@ -904,17 +906,34 @@ button {
   display: flex ;
   justify-content: center;
   align-items: center;
+  opacity: 0;
+  transition: 200ms all ease;
+  transition-delay: 300ms;
 }
 
 .bgl-popup-box {
-  padding: 50px;
+  padding: 60px;
   background: White;
   max-width: 600px;
   width: 100%;
   border-radius: 8px;
   color: Black;
   text-align: center ;
-  transition: 200ms all ease;
+}
+
+.bgl-popup-img {
+  max-height: 100px;
+  margin-bottom: 30px;
+}
+
+.bgl-popup-background.open {
+  z-index: 99999;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.bgl-popup-background.open .bgl-popup-content-wrap {
+  opacity: 1;
 }
 
 @media screen and (max-width: 991px) {
