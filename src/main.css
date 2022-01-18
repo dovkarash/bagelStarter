@@ -58,7 +58,7 @@ main {
  */
 
 h1 {
-  font-size: 2em;
+  font-size: 60px;
   margin: 0.67em 0;
 }
 
@@ -587,7 +587,7 @@ button {
 }
 
 .bgl-big-head {
-  font-size: 60px;
+  font-size: 70px;
   margin-bottom: 20px;
   margin-top: 30px;
 }
@@ -995,7 +995,7 @@ button {
 
 @media screen and (max-width: 767px) {
   .bgl-big-head {
-    font-size: 30px;
+    font-size: 40px;
   }
 
   .bgl-popup-box {
