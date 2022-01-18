@@ -75,7 +75,10 @@
 >Click me!</a><a
                   href=""
                   class="bgl-btn line"
-              >Click me!</a></div><div class="bgl-popup-wrap"><a
+              >Click me!</a></div><div class="bgl-box">
+          <p class="bgl-text">this is a box a very simple box</p>
+        </div>
+        <div class="bgl-popup-wrap center"><a
     href=""
     class="bgl-btn"
 >Pop me!</a>
@@ -90,17 +93,15 @@
         class=""
      /></a>
     <div class="bgl-popup-content-wrap"><div class="bgl-popup-box"><img
-    src="https://via.placeholder.com/150"
+    src="../assets/eatMe.svg"
     height=""
     width=""
+    class="bgl-popup-img"
  />
-    <p>This is my popup, there's no other like it, and I can pop it if I like</p><a
-                                                                                     href=""
-                                                                                     class="bgl-btn"
-                                                                                 >Popup&nbsp;</a></div></div></div></div>
-        <div class="bgl-box">
-          <p class="bgl-text">this is a box a very simple box</p>
-        </div>
+    <h4>This is my popup</h4><p>there's no other like it, and I can pop it if I like</p><a
+                                                                                            href=""
+                                                                                            class="bgl-btn"
+                                                                                        >Popup&nbsp;</a></div></div></div></div>
         <div class="bgl-form">
           <form
               action="/"
