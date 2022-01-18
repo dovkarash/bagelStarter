@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="375px" height="386px" viewBox="0 0 375 386" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>red-arrow</title>
+    <g id="starter" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard-Copy-3" transform="translate(-981.000000, -175.000000)" stroke="#F68943">
+            <g id="red-arrow" transform="translate(1168.406408, 368.012468) scale(-1, 1) rotate(-120.000000) translate(-1168.406408, -368.012468) translate(1022.748220, 237.324785)">
+                <path d="M52.9626963,12.5101099 C57.8027735,99.82028 92.7673919,186.319444 238.353679,260.457531" id="Line" stroke-linecap="square" stroke-dasharray="6" transform="translate(145.658188, 136.483820) rotate(-107.000000) translate(-145.658188, -136.483820) "></path>
+                <polyline id="Path" transform="translate(236.299019, 18.741111) rotate(56.000000) translate(-236.299019, -18.741111) " points="222.799019 32.2411114 222.799019 5.24111143 249.799019 5.24111143"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>

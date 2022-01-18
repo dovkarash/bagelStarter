@@ -1,7 +1,6 @@
 <template>
   <div class="home">
     <div class="bagel-wrap">
-      <div class="pattern-wrap"><div class="oval"></div><div class="oval"></div><div class="oval"></div><div class="oval"></div><div class="oval"></div><div class="oval"></div><div class="oval"></div><div class="oval"></div><div class="oval"></div><div class="oval"></div><div class="oval"></div><div class="oval"></div><div class="oval"></div><div class="oval"></div><div class="oval"></div><div class="oval"></div><div class="oval"></div><div class="oval"></div><div class="oval"></div><div class="oval"></div><div class="oval"></div><div class="oval"></div></div>
       <div class="bgl-menu">
         <a
             href=""
@@ -100,12 +99,11 @@
           <p class="bgl-text">this is a box a very simple box</p>
         </div>
         <div class="bgl-popup-wrap center">
-          <button type="button">Button</button>
-          <div
+          <button
               @click="openPopup = true"
               href=""
               class="bgl-btn"
-          >Pop me!</div>
+          >Pop me!</button>
           <div
               class="bgl-popup-background"
               :class="{ open: openPopup }"
@@ -299,6 +297,8 @@
              /></a>
         </div>
       </div>
+      <div class="back-bagel-shape"></div>
+      <div class="pattern-wrap"><div class="oval"></div><div class="oval"></div><div class="oval"></div><div class="oval"></div><div class="oval"></div><div class="oval"></div><div class="oval"></div><div class="oval"></div><div class="oval"></div><div class="oval"></div><div class="oval"></div><div class="oval"></div><div class="oval"></div><div class="oval"></div><div class="oval"></div><div class="oval"></div><div class="oval"></div><div class="oval"></div><div class="oval"></div><div class="oval"></div><div class="oval"></div><div class="oval"></div></div>
     </div>
   </div>
 </template>
