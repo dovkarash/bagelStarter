@@ -100,12 +100,11 @@
           <p class="bgl-text">this is a box a very simple box</p>
         </div>
         <div class="bgl-popup-wrap center">
-          <button type="button">Button</button>
-          <div
+          <button
               @click="openPopup = true"
               href=""
               class="bgl-btn"
-          >Pop me!</div>
+          >Pop me!</button>
           <div
               class="bgl-popup-background"
               :class="{ open: openPopup }"
